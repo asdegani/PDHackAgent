@@ -40,6 +40,16 @@ button:disabled {
   opacity: 0.5;
 }
 
+button.secondary {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--surface);
+}
+
+button.secondary:hover {
+  background: var(--background);
+}
+
 main {
   width: min(72rem, calc(100% - 2rem));
   margin: 0 auto;
@@ -151,6 +161,118 @@ main {
   border-left: 4px solid var(--brand);
   padding: 0.8rem 1rem;
   background: #e6fffa;
+}
+
+.onboarding-card {
+  width: min(38rem, 100%);
+  margin: 0 auto 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: var(--surface);
+  box-shadow: 0 0.5rem 1.5rem rgb(16 42 67 / 6%);
+}
+
+.onboarding-card h2 {
+  margin-top: 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.complete-card {
+  text-align: center;
+}
+
+.step-count,
+.field-hint {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.field {
+  margin: 1rem 0;
+}
+
+.field label,
+fieldset legend {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  color: var(--ink);
+  background: white;
+  font: inherit;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+fieldset:has(+ .field-error) {
+  border-color: #9b1c1c;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #5eead4;
+  outline-offset: 2px;
+}
+
+.check-field,
+.radio-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.check-field input,
+.radio-option input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.15rem;
+}
+
+.radio-option {
+  margin: 0.65rem 0;
+}
+
+.time-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.time-row input {
+  flex: 1;
+}
+
+fieldset {
+  margin: 1rem 0;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.field-hint {
+  margin: 0.35rem 0 0;
+}
+
+.field-error {
+  margin: 0.35rem 0;
+  color: #9b1c1c;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.step-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .error {

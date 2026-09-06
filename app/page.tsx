@@ -1,4 +1,4 @@
-import { SessionDemo } from "@/components/session-demo";
+import { OnboardingFlow } from "@/components/onboarding-flow";
 
 export default function Home() {
   return (
@@ -6,15 +6,15 @@ export default function Home() {
       <header className="hero">
         <div>
           <p className="eyebrow">Privacy-first prototype</p>
-          <h1>Guided movement session</h1>
+          <h1>Your daily companion</h1>
           <p>
-            A runnable foundation for consent, camera setup, deterministic session
-            orchestration, and local measurement extraction.
+            Personalize a morning check-in, optional medication reminders, and
+            guided movement sessions.
           </p>
         </div>
         <span className="status">POC</span>
       </header>
-      <SessionDemo />
+      <OnboardingFlow />
     </main>
   );
 }
